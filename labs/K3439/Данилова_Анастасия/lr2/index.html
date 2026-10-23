@@ -19,7 +19,7 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Поиск</a></li>
           <li class="nav-item"><a class="nav-link" href="messages.html">Сообщения</a></li>
           <li class="nav-item"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Войти</a></li>
+          <li class="nav-item" id="nav-auth"></li>
         </ul>
       </div>
     </div>
@@ -61,78 +61,7 @@
       <main class="col-lg-9">
         <p class="text-muted" id="found-count"></p>
         <div class="row g-3" id="properties">
-        <div class="col-md-6 col-lg-4 property-col" data-type="APARTMENT" data-city="Санкт-Петербург" data-price="35000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat1/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Квартира</span>
-              <h5 class="card-title">Уютная однушка у метро</h5>
-              <p class="card-text text-muted mb-1">Санкт-Петербург, ул. Кронверкская, 10</p>
-              <p class="price">35 000 ₽ / мес</p>
-              <a href="property.html?id=1" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 property-col" data-type="STUDIO" data-city="Санкт-Петербург" data-price="42000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat2/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Студия</span>
-              <h5 class="card-title">Студия с видом на Неву</h5>
-              <p class="card-text text-muted mb-1">Санкт-Петербург, наб. Робеспьера, 4</p>
-              <p class="price">42 000 ₽ / мес</p>
-              <a href="property.html?id=2" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 property-col" data-type="ROOM" data-city="Санкт-Петербург" data-price="18000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat3/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Комната</span>
-              <h5 class="card-title">Комната в центре</h5>
-              <p class="card-text text-muted mb-1">Санкт-Петербург, Невский пр., 88</p>
-              <p class="price">18 000 ₽ / мес</p>
-              <a href="property.html?id=3" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 property-col" data-type="HOUSE" data-city="Комарово" data-price="90000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat4/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Дом</span>
-              <h5 class="card-title">Дом в Комарово</h5>
-              <p class="card-text text-muted mb-1">Комарово, ул. Лесная, 3</p>
-              <p class="price">90 000 ₽ / мес</p>
-              <a href="property.html?id=4" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 property-col" data-type="APARTMENT" data-city="Москва" data-price="65000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat5/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Квартира</span>
-              <h5 class="card-title">Двушка на Таганке</h5>
-              <p class="card-text text-muted mb-1">Москва, ул. Марксистская, 22</p>
-              <p class="price">65 000 ₽ / мес</p>
-              <a href="property.html?id=5" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 property-col" data-type="STUDIO" data-city="Москва" data-price="38000">
-          <div class="card h-100">
-            <img src="https://picsum.photos/seed/flat6/600/400" class="card-img-top" alt="">
-            <div class="card-body">
-              <span class="badge text-bg-light mb-2">Студия</span>
-              <h5 class="card-title">Маленькая студия</h5>
-              <p class="card-text text-muted mb-1">Москва, ул. Бауманская, 7</p>
-              <p class="price">38 000 ₽ / мес</p>
-              <a href="property.html?id=6" class="btn btn-outline-primary btn-sm">Подробнее</a>
-            </div>
-          </div>
-        </div>
+          <p>Загрузка...</p>
         </div>
       </main>
     </div>
@@ -141,6 +70,9 @@
   <footer class="text-center text-muted py-4">© 2026 Snimu</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
