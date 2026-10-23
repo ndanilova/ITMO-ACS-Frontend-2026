@@ -19,7 +19,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Поиск</a></li>
           <li class="nav-item"><a class="nav-link" href="messages.html">Сообщения</a></li>
           <li class="nav-item"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Войти</a></li>
+          <li class="nav-item" id="nav-auth"></li>
         </ul>
       </div>
     </div>
@@ -28,65 +28,8 @@
   <div class="container my-4">
     <a href="index.html" class="d-inline-block mb-3">← Назад к поиску</a>
 
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <div id="photos" class="carousel slide">
-          <div class="carousel-inner rounded">
-            <div class="carousel-item active">
-              <img src="https://picsum.photos/seed/flat1/900/600" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-              <img src="https://picsum.photos/seed/flat1b/900/600" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-              <img src="https://picsum.photos/seed/flat1c/900/600" class="d-block w-100" alt="">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#photos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#photos" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-
-        <h2 class="h4 mt-4">Описание</h2>
-        <p>
-          Светлая квартира в 5 минутах от метро Горьковская. Есть вся мебель и техника,
-          недавно сделан косметический ремонт. Рядом парк и магазины.
-        </p>
-
-        <h2 class="h4 mt-4">Удобства</h2>
-        <ul>
-          <li>Wi-Fi</li>
-          <li>Стиральная машина</li>
-          <li>Холодильник</li>
-          <li>Балкон</li>
-        </ul>
-      </div>
-
-      <div class="col-lg-5">
-        <div class="bg-white p-4 rounded">
-          <span class="badge text-bg-light">Квартира</span>
-          <h1 class="h3 mt-2">Уютная однушка у метро</h1>
-          <p class="text-muted">Санкт-Петербург, ул. Кронверкская, 10</p>
-          <p class="price fs-3">35 000 ₽ / мес</p>
-
-          <h3 class="h6 mt-3">Условия аренды</h3>
-          <ul class="list-unstyled small">
-            <li>Срок: от 3 месяцев</li>
-            <li>Залог: 35 000 ₽</li>
-            <li>Коммунальные услуги включены</li>
-            <li>Без животных</li>
-          </ul>
-
-          <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#bookModal">Арендовать</button>
-          <a href="messages.html" class="btn btn-outline-secondary w-100 mt-2">Написать владельцу</a>
-
-          <hr>
-          <p class="mb-0 small">Владелец: <b>Ирина Смирнова</b></p>
-        </div>
-      </div>
+    <div id="property">
+      <p>Загрузка...</p>
     </div>
   </div>
 
@@ -109,6 +52,7 @@
               <input type="date" class="form-control" name="end" required>
             </div>
             <p class="mb-0">Итого: <b id="total">—</b></p>
+            <div class="alert alert-danger d-none mt-3 mb-0" id="book-error"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
@@ -120,6 +64,9 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/property.js"></script>
 </body>
 </html>
