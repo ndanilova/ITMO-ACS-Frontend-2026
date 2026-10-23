@@ -80,3 +80,8 @@ fieldset legend {
   background: #e9ecef;
   color: #000;
 }
+
+/* на сером фоне стандартный синий не проходил по контрасту */
+.back-link {
+  color: #0a58ca;
+}
