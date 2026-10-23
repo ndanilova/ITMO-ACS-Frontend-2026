@@ -147,3 +147,8 @@ fieldset legend {
   --bs-btn-color: var(--link);
   --bs-btn-border-color: var(--link);
 }
+
+[data-theme="dark"] .btn-outline-secondary {
+  --bs-btn-color: #adb5bd;
+  --bs-btn-border-color: #adb5bd;
+}
