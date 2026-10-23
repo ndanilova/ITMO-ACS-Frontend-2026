@@ -19,7 +19,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Поиск</a></li>
           <li class="nav-item"><a class="nav-link active" href="messages.html">Сообщения</a></li>
           <li class="nav-item"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Выйти</a></li>
+          <li class="nav-item" id="nav-auth"></li>
         </ul>
       </div>
     </div>
@@ -29,30 +29,13 @@
     <h1 class="h3 mb-3">Сообщения и сделки</h1>
     <div class="row g-3">
       <div class="col-md-4">
-        <div class="list-group" id="chats">
-          <a href="#" class="list-group-item list-group-item-action active">
-            <b>Ирина Смирнова</b><br>
-            <small>Уютная однушка у метро</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <b>Олег Петров</b><br>
-            <small>Студия с видом на Неву</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <b>Мария К.</b><br>
-            <small>Комната в центре</small>
-          </a>
-        </div>
+        <div class="list-group" id="chats"></div>
       </div>
 
       <div class="col-md-8">
         <div class="bg-white rounded p-3 d-flex flex-column chat">
-          <div class="messages flex-grow-1" id="messages">
-            <div class="msg">Здравствуйте! Квартира ещё свободна?</div>
-            <div class="msg msg-other">Добрый день, да, свободна с 1 ноября</div>
-            <div class="msg">Отлично, можно посмотреть в субботу?</div>
-            <div class="msg msg-other">Да, давайте в 12:00</div>
-          </div>
+          <div class="mb-2 border-bottom pb-2" id="chat-title">Выберите диалог</div>
+          <div class="messages flex-grow-1" id="messages"></div>
           <form class="d-flex gap-2 mt-3" id="send-form">
             <input class="form-control" name="text" placeholder="Сообщение..." autocomplete="off">
             <button class="btn btn-primary">Отправить</button>
@@ -60,16 +43,15 @@
         </div>
 
         <h2 class="h5 mt-4">История сделок</h2>
-        <ul class="list-group">
-          <li class="list-group-item">01.09.2026 — договор по «Студия с видом на Неву» подписан</li>
-          <li class="list-group-item">31.07.2026 — аренда «Комната в центре» завершена</li>
-          <li class="list-group-item">20.10.2026 — заявка на «Уютная однушка у метро» отправлена</li>
-        </ul>
+        <ul class="list-group" id="deals"></ul>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/messages.js"></script>
 </body>
 </html>
