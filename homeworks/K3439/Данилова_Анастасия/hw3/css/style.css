@@ -141,3 +141,9 @@ fieldset legend {
 .back-link {
   color: var(--link);
 }
+
+/* у бутстрапа outline-кнопки в тёмной теме слишком тёмные */
+[data-theme="dark"] .btn-outline-primary {
+  --bs-btn-color: var(--link);
+  --bs-btn-border-color: var(--link);
+}
