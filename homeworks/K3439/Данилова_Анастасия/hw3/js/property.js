@@ -45,7 +45,7 @@ function renderProperty(p) {
       </div>
 
       <div class="col-lg-5">
-        <div class="bg-white p-4 rounded">
+        <div class="surface p-4 rounded">
           <span class="badge text-bg-light">${TYPE_NAMES[p.type]}</span>
           <h1 class="h3 mt-2">${escapeHtml(p.title)}</h1>
           <p class="text-muted">${escapeHtml(p.city)}, ${escapeHtml(p.address)}</p>
