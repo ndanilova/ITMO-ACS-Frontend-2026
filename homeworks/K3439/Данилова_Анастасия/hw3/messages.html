@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сообщения — Snimu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#content" class="visually-hidden-focusable skip-link">Перейти к содержимому</a>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom" aria-label="Основная навигация">
+    <main id="content" class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Snimu</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Поиск</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="messages.html">Сообщения</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile.html">Личный кабинет</a></li>
+          <li class="nav-item" id="nav-auth"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <h1 class="h3 mb-3">Сообщения и сделки</h1>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <nav class="list-group" id="chats" aria-label="Диалоги"></nav>
+      </div>
+
+      <div class="col-md-8">
+        <div class="bg-white rounded p-3 d-flex flex-column chat">
+          <div class="mb-2 border-bottom pb-2" id="chat-title">Выберите диалог</div>
+          <div class="messages flex-grow-1" id="messages" role="log" aria-live="polite" aria-label="Сообщения" tabindex="0"></div>
+          <form class="d-flex gap-2 mt-3" id="send-form">
+            <label class="visually-hidden" for="msg-text">Текст сообщения</label>
+            <input class="form-control" id="msg-text" name="text" placeholder="Сообщение..." autocomplete="off">
+            <button class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+
+        <h2 class="h5 mt-4">История сделок</h2>
+        <ul class="list-group" id="deals"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/messages.js"></script>
+</body>
+</html>

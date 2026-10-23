@@ -1,0 +1,87 @@
+body {
+  background: #f5f6f8;
+}
+
+/* видимый фокус для навигации с клавиатуры */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #fd7e14;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  background: #fff;
+  padding: 8px 12px;
+}
+
+fieldset legend {
+  margin-bottom: 0.5rem;
+}
+
+.auth-box {
+  max-width: 420px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filters {
+  position: sticky;
+  top: 20px;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* чат */
+.chat {
+  height: 420px;
+}
+
+.messages {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.msg {
+  max-width: 70%;
+  align-self: flex-end;
+  background: #0d6efd;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.msg-other {
+  align-self: flex-start;
+  background: #e9ecef;
+  color: #000;
+}
+
+/* на сером фоне стандартный синий не проходил по контрасту */
+.back-link {
+  color: #0a58ca;
+}
