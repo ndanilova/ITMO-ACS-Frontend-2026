@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
+  <a href="#content" class="visually-hidden-focusable skip-link">Перейти к содержимому</a>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom" aria-label="Основная навигация">
+    <main id="content" class="container">
       <a class="navbar-brand fw-bold" href="index.html">Snimu</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Открыть меню">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Поиск</a></li>
           <li class="nav-item"><a class="nav-link" href="messages.html">Сообщения</a></li>
-          <li class="nav-item"><a class="nav-link active" href="profile.html">Личный кабинет</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.html">Личный кабинет</a></li>
           <li class="nav-item" id="nav-auth"></li>
         </ul>
       </div>
@@ -64,7 +65,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <div class="modal fade" id="addModal" tabindex="-1">
     <div class="modal-dialog">
