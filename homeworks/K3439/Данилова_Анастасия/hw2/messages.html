@@ -38,7 +38,8 @@
           <div class="mb-2 border-bottom pb-2" id="chat-title">Выберите диалог</div>
           <div class="messages flex-grow-1" id="messages"></div>
           <form class="d-flex gap-2 mt-3" id="send-form">
-            <input class="form-control" name="text" placeholder="Сообщение..." autocomplete="off">
+            <label class="visually-hidden" for="msg-text">Текст сообщения</label>
+            <input class="form-control" id="msg-text" name="text" placeholder="Сообщение..." autocomplete="off">
             <button class="btn btn-primary">Отправить</button>
           </form>
         </div>

@@ -17,30 +17,31 @@
 
   <div class="container">
     <div class="auth-box">
-      <h2 class="mb-4">Регистрация</h2>
-      <div class="alert alert-danger d-none" id="error"></div>
+      <h1 class="h2 mb-4">Регистрация</h1>
+      <div class="alert alert-danger d-none" id="error" role="alert"></div>
       <form id="register-form">
         <div class="row">
           <div class="col mb-3">
-            <label class="form-label">Имя</label>
-            <input type="text" class="form-control" name="firstName" required>
+            <label class="form-label" for="firstName">Имя</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" autocomplete="given-name" required>
           </div>
           <div class="col mb-3">
-            <label class="form-label">Фамилия</label>
-            <input type="text" class="form-control" name="lastName" required>
+            <label class="form-label" for="lastName">Фамилия</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" autocomplete="family-name" required>
           </div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" required>
+          <label class="form-label" for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Пароль</label>
-          <input type="password" class="form-control" name="password" minlength="6" required>
+          <label class="form-label" for="password">Пароль</label>
+          <input type="password" class="form-control" id="password" name="password" minlength="6" autocomplete="new-password" aria-describedby="password-help" required>
+          <div class="form-text" id="password-help">Минимум 6 символов</div>
         </div>
         <div class="mb-3">
-          <label class="form-label">Я хочу</label>
-          <select class="form-select" name="role">
+          <label class="form-label" for="role">Я хочу</label>
+          <select class="form-select" id="role" name="role">
             <option value="TENANT">снимать жильё</option>
             <option value="LANDLORD">сдавать жильё</option>
           </select>

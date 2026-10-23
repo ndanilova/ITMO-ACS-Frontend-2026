@@ -17,16 +17,16 @@
 
   <div class="container">
     <div class="auth-box">
-      <h2 class="mb-4">Вход</h2>
-      <div class="alert alert-danger d-none" id="error"></div>
+      <h1 class="h2 mb-4">Вход</h1>
+      <div class="alert alert-danger d-none" id="error" role="alert"></div>
       <form id="login-form">
         <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" placeholder="you@mail.ru" required>
+          <label class="form-label" for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" autocomplete="email" placeholder="you@mail.ru" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Пароль</label>
-          <input type="password" class="form-control" name="password" required>
+          <label class="form-label" for="password">Пароль</label>
+          <input type="password" class="form-control" id="password" name="password" autocomplete="current-password" required>
         </div>
         <button type="submit" class="btn btn-primary w-100">Войти</button>
       </form>

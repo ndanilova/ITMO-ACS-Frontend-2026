@@ -35,25 +35,25 @@
   </main>
 
   <!-- модалка бронирования -->
-  <div class="modal fade" id="bookModal" tabindex="-1">
+  <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalTitle" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <form id="book-form">
           <div class="modal-header">
-            <h5 class="modal-title">Заявка на аренду</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <h2 class="modal-title h5" id="bookModalTitle">Заявка на аренду</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
             <div class="mb-3">
-              <label class="form-label">Дата заезда</label>
-              <input type="date" class="form-control" name="start" required>
+              <label class="form-label" for="start">Дата заезда</label>
+              <input type="date" class="form-control" id="start" name="start" required>
             </div>
             <div class="mb-3">
-              <label class="form-label">Дата выезда</label>
-              <input type="date" class="form-control" name="end" required>
+              <label class="form-label" for="end">Дата выезда</label>
+              <input type="date" class="form-control" id="end" name="end" required>
             </div>
-            <p class="mb-0">Итого: <b id="total">—</b></p>
-            <div class="alert alert-danger d-none mt-3 mb-0" id="book-error"></div>
+            <p class="mb-0">Итого: <b id="total" aria-live="polite">—</b></p>
+            <div class="alert alert-danger d-none mt-3 mb-0" id="book-error" role="alert"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>

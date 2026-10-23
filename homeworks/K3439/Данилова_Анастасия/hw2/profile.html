@@ -67,27 +67,34 @@
     </div>
   </main>
 
-  <div class="modal fade" id="addModal" tabindex="-1">
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalTitle" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <form id="add-form">
           <div class="modal-header">
-            <h5 class="modal-title">Новый объект</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <h2 class="modal-title h5" id="addModalTitle">Новый объект</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
-            <input class="form-control mb-2" name="title" placeholder="Название" required>
-            <select class="form-select mb-2" name="type">
+            <label class="visually-hidden" for="add-title">Название</label>
+            <input class="form-control mb-2" id="add-title" name="title" placeholder="Название" required>
+            <label class="visually-hidden" for="add-type">Тип</label>
+            <select class="form-select mb-2" id="add-type" name="type">
               <option value="APARTMENT">Квартира</option>
               <option value="STUDIO">Студия</option>
               <option value="ROOM">Комната</option>
               <option value="HOUSE">Дом</option>
             </select>
-            <input class="form-control mb-2" name="city" placeholder="Город" required>
-            <input class="form-control mb-2" name="address" placeholder="Адрес" required>
-            <input type="number" class="form-control mb-2" name="price" placeholder="Цена за месяц" min="1" required>
-            <input class="form-control mb-2" name="amenities" placeholder="Удобства через запятую">
-            <textarea class="form-control" name="description" rows="3" placeholder="Описание"></textarea>
+            <label class="visually-hidden" for="add-city">Город</label>
+            <input class="form-control mb-2" id="add-city" name="city" placeholder="Город" required>
+            <label class="visually-hidden" for="add-address">Адрес</label>
+            <input class="form-control mb-2" id="add-address" name="address" placeholder="Адрес" required>
+            <label class="visually-hidden" for="add-price">Цена за месяц</label>
+            <input type="number" class="form-control mb-2" id="add-price" name="price" placeholder="Цена за месяц" min="1" required>
+            <label class="visually-hidden" for="add-amenities">Удобства через запятую</label>
+            <input class="form-control mb-2" id="add-amenities" name="amenities" placeholder="Удобства через запятую">
+            <label class="visually-hidden" for="add-description">Описание</label>
+            <textarea class="form-control" id="add-description" name="description" rows="3" placeholder="Описание"></textarea>
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary">Сохранить</button>
