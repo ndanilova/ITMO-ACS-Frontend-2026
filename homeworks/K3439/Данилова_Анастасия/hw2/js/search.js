@@ -5,14 +5,14 @@ function propertyCard(p) {
   return `
     <div class="col-md-6 col-lg-4">
       <div class="card h-100">
-        <img src="${p.images[0]}" class="card-img-top" alt="">
+        <img src="${p.images[0]}" class="card-img-top" alt="Фото: ${escapeHtml(p.title)}" loading="lazy">
         <div class="card-body">
           <span class="badge text-bg-light mb-2">${TYPE_NAMES[p.type]}</span>
           ${p.isAvailable ? '' : '<span class="badge text-bg-secondary mb-2">Сдано</span>'}
-          <h5 class="card-title">${escapeHtml(p.title)}</h5>
+          <h2 class="card-title h5">${escapeHtml(p.title)}</h2>
           <p class="card-text text-muted mb-1">${escapeHtml(p.city)}, ${escapeHtml(p.address)}</p>
           <p class="price">${formatPrice(p.pricePerMonth)} / мес</p>
-          <a href="property.html?id=${p.id}" class="btn btn-outline-primary btn-sm">Подробнее</a>
+          <a href="property.html?id=${p.id}" class="btn btn-outline-primary btn-sm">Подробнее<span class="visually-hidden"> об объекте «${escapeHtml(p.title)}»</span></a>
         </div>
       </div>
     </div>`

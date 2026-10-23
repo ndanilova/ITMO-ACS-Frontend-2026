@@ -2,6 +2,29 @@ body {
   background: #f5f6f8;
 }
 
+/* видимый фокус для навигации с клавиатуры */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #fd7e14;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  background: #fff;
+  padding: 8px 12px;
+}
+
+fieldset legend {
+  margin-bottom: 0.5rem;
+}
+
 .auth-box {
   max-width: 420px;
   margin: 60px auto;

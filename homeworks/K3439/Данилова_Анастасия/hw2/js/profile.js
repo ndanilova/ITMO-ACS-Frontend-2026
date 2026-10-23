@@ -4,8 +4,8 @@ const user = getUser()
 
 function renderUserCard() {
   document.getElementById('user-card').innerHTML = `
-    <img src="${user.avatar}" class="rounded-circle mb-2" width="100" height="100" alt="">
-    <h2 class="h5 mb-0">${escapeHtml(user.firstName)} ${escapeHtml(user.lastName)}</h2>
+    <img src="${user.avatar}" class="rounded-circle mb-2" width="100" height="100" alt="Аватар пользователя">
+    <h1 class="h5 mb-0">${escapeHtml(user.firstName)} ${escapeHtml(user.lastName)}</h1>
     <p class="text-muted small mb-0">${escapeHtml(user.email)}</p>`
 }
 
@@ -64,8 +64,8 @@ async function loadRequests() {
       </div>
       <div>
         ${r.status === 'PENDING'
-          ? `<button class="btn btn-sm btn-success" data-id="${r.id}" data-status="APPROVED">Одобрить</button>
-             <button class="btn btn-sm btn-outline-danger" data-id="${r.id}" data-status="REJECTED">Отклонить</button>`
+          ? `<button class="btn btn-sm btn-success" data-id="${r.id}" data-status="APPROVED" aria-label="Одобрить заявку на «${escapeHtml(r.property.title)}»">Одобрить</button>
+             <button class="btn btn-sm btn-outline-danger" data-id="${r.id}" data-status="REJECTED" aria-label="Отклонить заявку на «${escapeHtml(r.property.title)}»">Отклонить</button>`
           : statusBadge(r.status)}
       </div>
     </div>`).join('')

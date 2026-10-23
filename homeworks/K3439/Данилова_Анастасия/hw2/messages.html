@@ -30,13 +30,13 @@
     <h1 class="h3 mb-3">Сообщения и сделки</h1>
     <div class="row g-3">
       <div class="col-md-4">
-        <div class="list-group" id="chats"></div>
+        <nav class="list-group" id="chats" aria-label="Диалоги"></nav>
       </div>
 
       <div class="col-md-8">
         <div class="bg-white rounded p-3 d-flex flex-column chat">
           <div class="mb-2 border-bottom pb-2" id="chat-title">Выберите диалог</div>
-          <div class="messages flex-grow-1" id="messages"></div>
+          <div class="messages flex-grow-1" id="messages" role="log" aria-live="polite" aria-label="Сообщения" tabindex="0"></div>
           <form class="d-flex gap-2 mt-3" id="send-form">
             <label class="visually-hidden" for="msg-text">Текст сообщения</label>
             <input class="form-control" id="msg-text" name="text" placeholder="Сообщение..." autocomplete="off">

@@ -8,7 +8,7 @@ function renderProperty(p) {
 
   const slides = p.images.map((img, i) => `
     <div class="carousel-item ${i === 0 ? 'active' : ''}">
-      <img src="${img}" class="d-block w-100" alt="">
+      <img src="${img}" class="d-block w-100" alt="Фото ${i + 1} из ${p.images.length}: ${escapeHtml(p.title)}">
     </div>`).join('')
 
   let buttons = ''
@@ -25,13 +25,15 @@ function renderProperty(p) {
   container.innerHTML = `
     <div class="row g-4">
       <div class="col-lg-7">
-        <div id="photos" class="carousel slide">
+        <div id="photos" class="carousel slide" aria-label="Фотографии объекта">
           <div class="carousel-inner rounded">${slides}</div>
           <button class="carousel-control-prev" type="button" data-bs-target="#photos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущее фото</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#photos" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующее фото</span>
           </button>
         </div>
 
@@ -49,7 +51,7 @@ function renderProperty(p) {
           <p class="text-muted">${escapeHtml(p.city)}, ${escapeHtml(p.address)}</p>
           <p class="price fs-3">${formatPrice(p.pricePerMonth)} / мес</p>
 
-          <h3 class="h6 mt-3">Условия аренды</h3>
+          <h2 class="h6 mt-3">Условия аренды</h2>
           <ul class="list-unstyled small">
             <li>Срок: от ${p.minTerm} мес.</li>
             <li>Залог: ${formatPrice(p.deposit)}</li>
@@ -81,7 +83,7 @@ async function loadProperty() {
     document.title = property.title + ' — Snimu'
     renderProperty(property)
   } catch (err) {
-    container.innerHTML = '<div class="alert alert-danger">Объект не найден</div>'
+    container.innerHTML = '<div class="alert alert-danger" role="alert">Объект не найден</div>'
   }
 }
 

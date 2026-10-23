@@ -24,7 +24,7 @@ function renderChats() {
   document.getElementById('chats').innerHTML = chats.map(c => {
     const name = c.tenantId === me.id ? c.landlordName : c.tenantName
     return `
-      <a href="#" class="list-group-item list-group-item-action ${c.id === currentChatId ? 'active' : ''}" data-id="${c.id}">
+      <a href="#" class="list-group-item list-group-item-action ${c.id === currentChatId ? 'active' : ''}" data-id="${c.id}" ${c.id === currentChatId ? 'aria-current="true"' : ''}>
         <b>${escapeHtml(name)}</b><br>
         <small>${escapeHtml(c.property.title)}</small>
       </a>`
@@ -42,7 +42,7 @@ async function loadMessages() {
   const messages = await api(`/messages?chatId=${currentChatId}&_sort=createdAt`)
   const box = document.getElementById('messages')
   box.innerHTML = messages.map(m =>
-    `<div class="msg ${m.senderId === me.id ? '' : 'msg-other'}">${escapeHtml(m.text)}</div>`
+    `<div class="msg ${m.senderId === me.id ? '' : 'msg-other'}"><span class="visually-hidden">${m.senderId === me.id ? 'Вы' : 'Собеседник'}: </span>${escapeHtml(m.text)}</div>`
   ).join('') || '<p class="text-muted">Сообщений нет, напишите первым</p>'
   box.scrollTop = box.scrollHeight
 }
