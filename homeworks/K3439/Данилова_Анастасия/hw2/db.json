@@ -1,0 +1,316 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "anna@mail.ru",
+      "password": "$2a$10$x655aElZVz90FRjMQM7kre89dACM1lNr4J8cOAMVHrqZxrDIyBvTa",
+      "firstName": "Анна",
+      "lastName": "Иванова",
+      "avatar": "https://i.pravatar.cc/150?img=47"
+    },
+    {
+      "id": 2,
+      "email": "irina@mail.ru",
+      "password": "$2a$10$x655aElZVz90FRjMQM7kre89dACM1lNr4J8cOAMVHrqZxrDIyBvTa",
+      "firstName": "Ирина",
+      "lastName": "Смирнова",
+      "avatar": "https://i.pravatar.cc/150?img=45"
+    },
+    {
+      "id": 3,
+      "email": "oleg@mail.ru",
+      "password": "$2a$10$x655aElZVz90FRjMQM7kre89dACM1lNr4J8cOAMVHrqZxrDIyBvTa",
+      "firstName": "Олег",
+      "lastName": "Петров",
+      "avatar": "https://i.pravatar.cc/150?img=12"
+    }
+  ],
+  "properties": [
+    {
+      "id": 1,
+      "userId": 2,
+      "ownerName": "Ирина Смирнова",
+      "title": "Уютная однушка у метро",
+      "type": "APARTMENT",
+      "city": "Санкт-Петербург",
+      "address": "ул. Кронверкская, 10",
+      "pricePerMonth": 35000,
+      "description": "Светлая квартира в 5 минутах от метро Горьковская. Есть вся мебель и техника, недавно сделан косметический ремонт.",
+      "images": [
+        "https://picsum.photos/seed/flat1/900/600",
+        "https://picsum.photos/seed/flat1b/900/600",
+        "https://picsum.photos/seed/flat1c/900/600"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Стиральная машина",
+        "Холодильник",
+        "Балкон"
+      ],
+      "minTerm": 3,
+      "deposit": 35000,
+      "utilitiesIncluded": true,
+      "petsAllowed": false,
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "ownerName": "Олег Петров",
+      "title": "Студия с видом на Неву",
+      "type": "STUDIO",
+      "city": "Санкт-Петербург",
+      "address": "наб. Робеспьера, 4",
+      "pricePerMonth": 42000,
+      "description": "Студия на 9 этаже с панорамным окном. Новый дом, консьерж.",
+      "images": [
+        "https://picsum.photos/seed/flat2/900/600",
+        "https://picsum.photos/seed/flat2b/900/600",
+        "https://picsum.photos/seed/flat2c/900/600"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Посудомоечная машина",
+        "Кондиционер"
+      ],
+      "minTerm": 6,
+      "deposit": 42000,
+      "utilitiesIncluded": false,
+      "petsAllowed": false,
+      "isAvailable": false
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "ownerName": "Ирина Смирнова",
+      "title": "Комната в центре",
+      "type": "ROOM",
+      "city": "Санкт-Петербург",
+      "address": "Невский пр., 88",
+      "pricePerMonth": 18000,
+      "description": "Комната 14 м² в трёхкомнатной квартире, соседи — студенты.",
+      "images": [
+        "https://picsum.photos/seed/flat3/900/600",
+        "https://picsum.photos/seed/flat3b/900/600",
+        "https://picsum.photos/seed/flat3c/900/600"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Стиральная машина"
+      ],
+      "minTerm": 1,
+      "deposit": 18000,
+      "utilitiesIncluded": true,
+      "petsAllowed": true,
+      "isAvailable": true
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "ownerName": "Анна Иванова",
+      "title": "Дом в Комарово",
+      "type": "HOUSE",
+      "city": "Комарово",
+      "address": "ул. Лесная, 3",
+      "pricePerMonth": 90000,
+      "description": "Двухэтажный дом у залива, участок 10 соток, баня.",
+      "images": [
+        "https://picsum.photos/seed/flat4/900/600",
+        "https://picsum.photos/seed/flat4b/900/600",
+        "https://picsum.photos/seed/flat4c/900/600"
+      ],
+      "amenities": [
+        "Парковка",
+        "Баня",
+        "Камин",
+        "Wi-Fi"
+      ],
+      "minTerm": 6,
+      "deposit": 90000,
+      "utilitiesIncluded": false,
+      "petsAllowed": true,
+      "isAvailable": false
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "ownerName": "Олег Петров",
+      "title": "Двушка на Таганке",
+      "type": "APARTMENT",
+      "city": "Москва",
+      "address": "ул. Марксистская, 22",
+      "pricePerMonth": 65000,
+      "description": "Двухкомнатная квартира, 7 минут до метро Марксистская.",
+      "images": [
+        "https://picsum.photos/seed/flat5/900/600",
+        "https://picsum.photos/seed/flat5b/900/600",
+        "https://picsum.photos/seed/flat5c/900/600"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Холодильник",
+        "Телевизор"
+      ],
+      "minTerm": 12,
+      "deposit": 65000,
+      "utilitiesIncluded": false,
+      "petsAllowed": false,
+      "isAvailable": true
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "ownerName": "Анна Иванова",
+      "title": "Маленькая студия",
+      "type": "STUDIO",
+      "city": "Москва",
+      "address": "ул. Бауманская, 7",
+      "pricePerMonth": 38000,
+      "description": "Компактная студия рядом с МГТУ, подойдёт студенту.",
+      "images": [
+        "https://picsum.photos/seed/flat6/900/600",
+        "https://picsum.photos/seed/flat6b/900/600",
+        "https://picsum.photos/seed/flat6c/900/600"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Микроволновка"
+      ],
+      "minTerm": 3,
+      "deposit": 38000,
+      "utilitiesIncluded": true,
+      "petsAllowed": false,
+      "isAvailable": true
+    }
+  ],
+  "rentals": [
+    {
+      "id": 1,
+      "propertyId": 2,
+      "userId": 1,
+      "landlordId": 3,
+      "startDate": "2026-09-01",
+      "endDate": "2027-03-01",
+      "totalPrice": 252000,
+      "status": "ACTIVE",
+      "createdAt": "2026-08-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "propertyId": 3,
+      "userId": 1,
+      "landlordId": 2,
+      "startDate": "2026-02-01",
+      "endDate": "2026-07-31",
+      "totalPrice": 108000,
+      "status": "COMPLETED",
+      "createdAt": "2026-01-25T12:30:00Z"
+    },
+    {
+      "id": 3,
+      "propertyId": 1,
+      "userId": 1,
+      "landlordId": 2,
+      "startDate": "2026-11-01",
+      "endDate": "2027-02-01",
+      "totalPrice": 105000,
+      "status": "PENDING",
+      "createdAt": "2026-10-10T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "propertyId": 4,
+      "userId": 3,
+      "landlordId": 1,
+      "startDate": "2026-06-15",
+      "endDate": "2026-12-15",
+      "totalPrice": 540000,
+      "status": "ACTIVE",
+      "createdAt": "2026-06-01T18:00:00Z"
+    }
+  ],
+  "chats": [
+    {
+      "id": 1,
+      "propertyId": 1,
+      "tenantId": 1,
+      "tenantName": "Анна Иванова",
+      "landlordId": 2,
+      "landlordName": "Ирина Смирнова"
+    },
+    {
+      "id": 2,
+      "propertyId": 2,
+      "tenantId": 1,
+      "tenantName": "Анна Иванова",
+      "landlordId": 3,
+      "landlordName": "Олег Петров"
+    },
+    {
+      "id": 3,
+      "propertyId": 4,
+      "tenantId": 3,
+      "tenantName": "Олег Петров",
+      "landlordId": 1,
+      "landlordName": "Анна Иванова"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "chatId": 1,
+      "senderId": 1,
+      "text": "Здравствуйте! Квартира ещё свободна?",
+      "createdAt": "2026-10-09T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "chatId": 1,
+      "senderId": 2,
+      "text": "Добрый день, да, свободна с 1 ноября",
+      "createdAt": "2026-10-09T10:05:00Z"
+    },
+    {
+      "id": 3,
+      "chatId": 1,
+      "senderId": 1,
+      "text": "Отлично, можно посмотреть в субботу?",
+      "createdAt": "2026-10-09T10:07:00Z"
+    },
+    {
+      "id": 4,
+      "chatId": 1,
+      "senderId": 2,
+      "text": "Да, давайте в 12:00",
+      "createdAt": "2026-10-09T10:20:00Z"
+    },
+    {
+      "id": 5,
+      "chatId": 2,
+      "senderId": 1,
+      "text": "Добрый вечер! Подскажите, где можно оставить велосипед?",
+      "createdAt": "2026-09-03T19:00:00Z"
+    },
+    {
+      "id": 6,
+      "chatId": 2,
+      "senderId": 3,
+      "text": "В подвале есть велопарковка, ключ на ресепшене",
+      "createdAt": "2026-09-03T19:30:00Z"
+    },
+    {
+      "id": 7,
+      "chatId": 3,
+      "senderId": 3,
+      "text": "Анна, а баню можно топить самим?",
+      "createdAt": "2026-06-20T14:00:00Z"
+    },
+    {
+      "id": 8,
+      "chatId": 3,
+      "senderId": 1,
+      "text": "Да, дрова в сарае :)",
+      "createdAt": "2026-06-20T15:00:00Z"
+    }
+  ]
+}

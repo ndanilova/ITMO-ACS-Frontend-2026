@@ -1,0 +1,12 @@
+{
+  "name": "snimu-frontend",
+  "version": "1.0.0",
+  "description": "ЛР2: сервис аренды жилья + моковое API на json-server",
+  "scripts": {
+    "server": "json-server-auth db.json --port 3000 -r routes.json"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  }
+}
