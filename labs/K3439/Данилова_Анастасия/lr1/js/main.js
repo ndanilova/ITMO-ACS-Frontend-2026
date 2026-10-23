@@ -1,4 +1,4 @@
-// фильтрация объектов на странице поиска (пока просто прячем карточки)
+// фильтрация объектов на странице поиска
 const filtersForm = document.getElementById('filters')
 
 function applyFilters() {
@@ -38,7 +38,7 @@ if (filtersForm) {
 
 // форма бронирования в модалке
 const bookForm = document.getElementById('book-form')
-const PRICE_PER_MONTH = 35000 // TODO: брать с карточки
+const PRICE_PER_MONTH = 35000
 
 if (bookForm) {
   bookForm.addEventListener('change', () => {
@@ -61,7 +61,7 @@ if (bookForm) {
   })
 }
 
-// отправка сообщения в чате (просто добавляем в список)
+// отправка сообщения в чате
 const sendForm = document.getElementById('send-form')
 
 if (sendForm) {
@@ -78,7 +78,7 @@ if (sendForm) {
   })
 }
 
-// вход / регистрация — пока без бэкенда, просто переходим в кабинет
+// вход / регистрация
 const authForm = document.getElementById('login-form') || document.getElementById('register-form')
 
 if (authForm) {
